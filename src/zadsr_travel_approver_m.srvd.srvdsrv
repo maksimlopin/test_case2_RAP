@@ -1,0 +1,5 @@
+@EndUserText.label: 'Travel approver application'
+define service ZADSR_TRAVEL_APPROVER_M {
+  expose ZADC_TRAVEL_APPROVER_M;
+  expose ZADC_BOOKING_APPROVER_M;
+}

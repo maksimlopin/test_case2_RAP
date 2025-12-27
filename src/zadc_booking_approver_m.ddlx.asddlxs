@@ -1,0 +1,64 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+    typeName: 'Booking',
+    typeNamePlural: 'Bookingss',
+    title: {
+        type: #STANDARD,
+        label: 'Booking',
+        value: 'BookingId'
+    }
+}
+@Search.searchable: true
+annotate entity ZADC_BOOKING_APPROVER_M with
+{
+  @UI.facet: [{
+      id: 'Booking',
+      purpose: #STANDARD,
+      position: 10,
+      label: 'Booking',
+      type: #IDENTIFICATION_REFERENCE
+  }
+  ]
+  @Search.defaultSearchElement: true
+  TravelId;
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  @Search.defaultSearchElement: true
+  BookingId;
+  @UI.lineItem: [{ position: 30, importance: #HIGH }]
+  @UI.identification: [{ position: 30 }]
+  BookingDate;
+  @UI.lineItem: [{ position: 40, importance: #HIGH }]
+  @UI.identification: [{ position: 40 }]
+  @UI.selectionField: [{ position: 10 }]
+  @Search.defaultSearchElement: true
+  CustomerId;
+  @UI.lineItem: [{ position: 50 }]
+  @UI.identification: [{ position: 50 }]
+  CarrierId;
+  @UI.lineItem: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  ConnectionId;
+  @UI.lineItem: [{ position: 70 }]
+  @UI.identification: [{ position: 70 }]
+  FlightDate;
+  @UI.lineItem: [{ position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  FlightPrice;
+  @Consumption.valueHelpDefinition: [{ entity: {
+    name: 'I_Currency',
+    element: 'Currency'
+  }}]
+  CurrencyCode;
+  @UI.lineItem: [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  @UI.textArrangement: #TEXT_ONLY
+  @Consumption.valueHelpDefinition: [{ entity: {
+      name: 'ZADI_BOOKING_STATUS_VH',
+      element: 'Value'
+  }}]
+  BookingStatus;
+  @UI.hidden: true
+  LastChangedAt;
+
+}

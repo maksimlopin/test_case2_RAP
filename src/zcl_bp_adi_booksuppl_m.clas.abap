@@ -1,0 +1,5 @@
+CLASS zcl_bp_adi_booksuppl_m DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zadi_travel_m.
+ENDCLASS.
+
+CLASS zcl_bp_adi_booksuppl_m IMPLEMENTATION.
+ENDCLASS.

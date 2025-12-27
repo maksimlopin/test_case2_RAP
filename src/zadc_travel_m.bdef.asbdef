@@ -1,0 +1,33 @@
+projection;
+strict ( 2 );
+
+define behavior for ZADC_TRAVEL_M //alias <alias_name>
+use etag
+{
+  use create;
+  use update;
+  use delete;
+  use action copyTravel;
+
+  use association _Booking { create; }
+}
+
+define behavior for ZADC_BOOKING_M //alias <alias_name>
+use etag
+{
+  use update;
+  use delete;
+
+  use association _Travel;
+  use association _BookingSuppl { create; }
+}
+
+define behavior for ZADC_BOOKSUPPL_M //alias <alias_name>
+use etag
+{
+  use update;
+  use delete;
+
+  use association _Travel;
+  use association _Booking;
+}

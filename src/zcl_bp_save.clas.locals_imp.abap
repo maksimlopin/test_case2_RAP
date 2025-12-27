@@ -1,0 +1,18 @@
+CLASS lsc_ZADI_TRAVEL_M DEFINITION INHERITING FROM cl_abap_behavior_saver.
+  PROTECTED SECTION.
+
+    METHODS save_modified REDEFINITION.
+
+    METHODS cleanup_finalize REDEFINITION.
+
+ENDCLASS.
+
+CLASS lsc_ZADI_TRAVEL_M IMPLEMENTATION.
+
+  METHOD save_modified.
+  ENDMETHOD.
+
+  METHOD cleanup_finalize.
+  ENDMETHOD.
+
+ENDCLASS.
